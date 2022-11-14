@@ -134,6 +134,11 @@
       </RunnerFormRow>
 
       <RunnerFormRow>
+        <template v-slot:label>Automatically Redirect to SSO</template>
+        <template v-slot:content><input type="checkbox" v-model="settings.ssoAutoRedirect"/></template>
+      </RunnerFormRow>
+
+      <RunnerFormRow>
         <template v-slot:label>Compress SAML Request</template>
         <template v-slot:content><input type="checkbox" v-model="settings.compressRequest"></template>
         <template v-slot:note>When making an initial login redirect, the SAMLRequest variable in the URL will be

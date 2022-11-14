@@ -13,6 +13,16 @@
     </style>
 </c:if>
 
+<c:if test="${samlSettings.ssoAutoRedirect}">
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (!urlParams.has('nosso')) {
+            window.location.replace('<%=loginUrl%>');
+        }
+    </script>
+</c:if>
+
 <div class="buttons">
     <a href="<%=loginUrl%>" class="btn btn_primary">${samlSettings.ssoLoginButtonName}</a>
 </div>

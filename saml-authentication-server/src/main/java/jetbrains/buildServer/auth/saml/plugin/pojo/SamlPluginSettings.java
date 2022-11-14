@@ -27,6 +27,8 @@ public class SamlPluginSettings {
 
     private boolean hideLoginForm;
 
+    private boolean ssoAutoRedirect;
+
     @NotEmpty(message = "Login button name is mandatory")
     private String ssoLoginButtonName = "Login with SSO";
 
